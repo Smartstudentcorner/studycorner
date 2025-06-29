@@ -1,11 +1,12 @@
 import React from "react";
+import { APP_NAME } from "../config";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
-        <Link className="navbar-brand" to="/">MyReactApp</Link>
+        <Link className="navbar-brand" to="/">{APP_NAME}</Link>
         <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span className="navbar-toggler-icon"></span>
         </button>
