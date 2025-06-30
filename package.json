@@ -1,16 +1,14 @@
 {
-  "name": "react-node-bootstrap-website",
+  "name": "node-webapp",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "build": "cd client && npm install && npm run build"
-  },
-  "dependencies": {
-    "express": "^4.18.2",
-    "path": "^0.12.7"
+    "start": "node server.js"
   },
   "engines": {
     "node": "18.x"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }
