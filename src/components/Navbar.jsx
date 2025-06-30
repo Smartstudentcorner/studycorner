@@ -8,7 +8,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="container">
         <Link className="navbar-brand" to="/">
-          <img src="/logo.png" alt="Logo" height="30" className="d-inline-block align-text-top" />
+          <img src={logo} alt="Logo" height="30" className="d-inline-block align-text-top" />
           {' '}MySite
         </Link>
         <button
