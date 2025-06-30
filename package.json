@@ -1,14 +1,16 @@
 {
-  "name": "node-webapp",
+  "name": "react-node-app",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "cd client && npm install && npm run build"
   },
   "engines": {
     "node": "18.x"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "path": "^0.12.7"
   }
 }
