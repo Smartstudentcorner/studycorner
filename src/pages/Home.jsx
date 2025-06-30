@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-const Home = () => {
+function Home() {
   return (
     <div className="text-center">
-      <h1>Welcome to My React App</h1>
-      <p>This is the home page built with Bootstrap 5 and React Router.</p>
+      <h1>Welcome to the Home Page</h1>
+      <img src="/logo.png" alt="Logo" className="img-fluid mt-3" style={{ maxWidth: '200px' }} />
     </div>
   );
-};
+}
 
 export default Home;
