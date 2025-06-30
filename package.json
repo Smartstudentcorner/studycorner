@@ -1,6 +1,7 @@
 {
   "name": "react-node-bootstrap-website",
   "version": "1.0.0",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "build": "cd client && npm install && npm run build"
@@ -9,6 +10,7 @@
     "node": "18.x"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "path": "^0.12.7"
   }
 }
