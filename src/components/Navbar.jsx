@@ -1,13 +1,22 @@
 import React from "react";
 import { APP_NAME } from "../config";
 import { Link } from "react-router-dom";
+import logo from '../../public/logo.png'; // or use `/logo.png` in `public`
 
-const Navbar = () => {
+function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="container">
-        <Link className="navbar-brand" to="/">{APP_NAME}</Link>
-        <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <Link className="navbar-brand" to="/">
+          <img src="/logo.png" alt="Logo" height="30" className="d-inline-block align-text-top" />
+          {' '}MySite
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
@@ -26,6 +35,6 @@ const Navbar = () => {
       </div>
     </nav>
   );
-};
+}
 
 export default Navbar;
