@@ -8,11 +8,11 @@ app.get('/api/message', (req, res) => {
 });
 
 // Serve static React files
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'client/public')));
 
 // React fallback
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build/index.html'));
+  res.sendFile(path.join(__dirname, 'client/public/index.html'));
 });
 
 const PORT = process.env.PORT || 5000;
