@@ -1,38 +1,14 @@
-# React + Node.js Fullstack App
 
-This is a full-stack web application built with:
+# Fullstack App: React + Node (Single Render Deployment)
 
-- 🖥️ Frontend: React with Bootstrap
-- 🖧 Backend: Node.js + Express
+## 📁 Project Structure
+- `client/`: React frontend
+- `server/`: Express backend
 
-## 🔧 Development Setup
+## 🚀 Deploy on Render
 
-### 1. Clone and Install
+### Render Settings:
+- Root Directory: `server`
+- Build Command: `cd ../client && npm install && npm run build && cd ../server && npm install`
+- Start Command: `npm start`
 
-```bash
-git clone https://your-repo-url
-cd my-fullstack-app
-```
-
-### 2. Backend Setup
-
-```bash
-cd backend
-npm install
-node server.js
-```
-
-### 3. Frontend Setup
-
-```bash
-cd frontend
-npm install
-npm start      # For dev
-npm run build  # For production build
-```
-
-## 🛠 Deployment Tips
-
-- Host the frontend `build/` folder on static hosts (Render, Netlify, Hostinger).
-- Deploy backend to any Node.js-supported server (Render, Railway, VPS, etc.)
-- For full deployment: serve `build/` folder from Node.js (optional).
