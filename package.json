@@ -1,11 +1,11 @@
 {
-  "name": "node-ts-web-service",
+  "name": "node-ts-bootstrap",
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn src/index.ts",
+    "dev": "ts-node-dev --respawn server/index.ts",
     "build": "tsc && npm run copy-html",
-    "copy-html": "copyfiles -u 1 src/views/*.html dist/views",
+    "copy-html": "copyfiles -u 1 server/views/*.html dist/views",
     "start": "node dist/index.js"
   },
   "dependencies": {

@@ -1,25 +1,47 @@
-# Node TypeScript Web Service
+# Node + TypeScript + Bootstrap Web Service
 
-## Description
-This is a sample Node.js project using TypeScript to run a basic Express web server.
+This is a basic Node.js web service using TypeScript and Bootstrap 5 to render a homepage.
 
-## Scripts
-- `npm run dev`: Run in development mode with auto-reloading.
-- `npm run build`: Compile TypeScript to JavaScript.
-- `npm start`: Run the compiled JavaScript code from `dist`.
+## 🚀 Deployment Instructions
 
-## Deployment (Render.com)
-1. Push your code to GitHub.
-2. Visit [Render](https://render.com/).
-3. Create a new Web Service:
-   - Connect your GitHub repo.
-   - Select your repo.
-   - Set build command: `npm install && npm run build`
-   - Set start command: `npm start`
-   - Choose Node version (e.g. 18+).
-4. Click Deploy.
+### 🟪 Render
 
-Render will automatically build and deploy your service.
+1. Go to [https://render.com](https://render.com)
+2. Click **New Web Service**
+3. Connect your GitHub repo or upload code
+4. Set:
+   - Build Command: `npm run build`
+   - Start Command: `npm start`
 
-## Endpoint
-- `GET /` - returns a hello message.
+### 🌿 Heroku
+
+1. Install Heroku CLI
+2. Run:
+   ```bash
+   heroku login
+   heroku create your-app-name
+   git push heroku main
+   ```
+
+### ▲ Vercel
+
+> Vercel is better for frontend, but can still be used for Express apps with `vercel.json`
+
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run: `vercel`
+
+### 🌐 Netlify
+
+> Netlify doesn’t support Node backends directly. Use Netlify Functions or host frontend only.
+
+---
+
+## 🔧 Local Dev
+
+```bash
+npm install
+npm run build
+npm start
+```
+
+Visit: [http://localhost:3000](http://localhost:3000)
