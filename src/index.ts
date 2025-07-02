@@ -6,7 +6,9 @@ import apiRoutes from './routes/api';
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname, 'views')));
+// ✅ Serve static files from src/views (for development and production)
+app.use(express.static(path.join(__dirname, '../src/views')));
+
 app.use('/', indexRoutes);
 app.use('/api', apiRoutes);
 
