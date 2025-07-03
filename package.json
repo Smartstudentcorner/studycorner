@@ -1,7 +1,6 @@
 {
-  "name": "node-ejs-webapp",
+  "name": "study-corner",
   "version": "1.0.0",
-  "description": "A simple Node.js web app using Express and EJS",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
