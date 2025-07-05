@@ -1,15 +1,15 @@
 const express = require('express');
-const app = express();
 const path = require('path');
+const app = express();
 
-const variables = require('./variables'); // ⬅️ Load shared variables
+const variables = require('./variables');
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Inject variables into all views
+// Global Variables
 app.use((req, res, next) => {
   res.locals.siteTitle = variables.siteTitle;
   res.locals.creatorName = variables.creatorName;
@@ -23,14 +23,14 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => {
   res.render('pages/home', { title: 'Home' });
 });
-
 app.get('/about', (req, res) => {
   res.render('pages/about', { title: 'About' });
 });
-
 app.get('/contact', (req, res) => {
   res.render('pages/contact', { title: 'Contact' });
 });
 
-// Start Server
-app.listen(3000, () => console.log('Server running on http://localhost:3000'));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
+});
