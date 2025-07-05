@@ -1,68 +1,173 @@
-# 📚 Study Corner
+# 📘 Study Corner
 
-**Study Corner** is a minimal Node.js app using Express with no frontend—just plain API-style responses. Ready for deployment on [Render](https://render.com) or any other Node hosting platform.
-
----
-
-## 🚀 Live Demo
-
-> Deploy this on [Render](https://render.com)
+**Study Corner** is a clean, responsive educational web app built using **Node.js**, **Express**, **EJS**, and **Bootstrap 5** — perfect for students, alumni, or any learning-focused community.  
+It uses a reusable layout, modular header and footer partials, and is fully mobile/tablet/desktop responsive.
 
 ---
 
-## 🛠 Setup
+## 🚀 Features
 
-```bash
-git clone https://github.com/yourusername/study-corner.git
-cd study-corner
-npm install
+- ✅ Node.js + Express + EJS
+- ✅ Bootstrap 5 styling only (no custom CSS)
+- ✅ Reusable `layout.ejs` for all pages
+- ✅ Optional `header.ejs` and `footer.ejs` includes
+- ✅ Sticky header and footer
+- ✅ Responsive for Mobile, Tablet, and PC
+- ✅ Expandable JS and Media support (folders included)
+- ✅ Easy to deploy on Render or GitHub
+
+---
+
+## 📁 Project Structure
+
+```
+study-corner/
+├── server.js
+├── package.json
+├── views/
+│   ├── layout.ejs
+│   ├── partials/
+│   │   ├── header.ejs
+│   │   └── footer.ejs
+│   └── pages/
+│       ├── home.ejs
+│       ├── about.ejs
+│       └── contact.ejs
+├── public/
+│   ├── js/
+│   │   ├── darkmode.js
+│   │   ├── transition.js
+│   │   └── notifications.js
+│   └── media/
+│       └── (your optional images/videos)
+├── README.md
 ```
 
 ---
 
-## 🧪 Run Locally
+## 📦 Dependencies
+
+- express
+- ejs
+- express-ejs-layouts
+
+---
+
+## 🛠 Installation & Usage
+
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/your-username/study-corner.git
+cd study-corner
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the App
 
 ```bash
 npm start
 ```
 
-Then open your browser:
-
-- `http://localhost:3000/` → plain text: "Welcome to Study Corner!"
-- `http://localhost:3000/api` → JSON response: `{ message: "Study Corner API is running!" }`
+Open in your browser: [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## 🌍 Deploy to Render
+## 🌐 Deploy to Render (Free Hosting)
 
-To deploy this app on Render:
-
-1. Push your project to GitHub (public or private)
+1. Push your project to a **GitHub** repository.
 2. Go to [https://render.com](https://render.com)
-3. Click **"New" > "Web Service"**
-4. Connect your GitHub repo
-5. Fill in the required details:
-   - **Environment:** Node
-   - **Build Command:** `npm install`
-   - **Start Command:** `npm start`
+3. Click **"New Web Service"**
+4. Choose **GitHub** → Select your repo
+5. Fill in:
+   - Environment: **Node**
+   - Build Command: `npm install`
+   - Start Command: `npm start`
+   - Root Directory: (leave blank)
 6. Click **Deploy**
 
-Render will automatically use the `PORT` environment variable.
+> Render will auto-install dependencies and run your app.
 
 ---
 
-## 📁 Folder Structure
+## 🧠 EJS Usage Pattern
 
+Each page includes this pattern:
+
+```ejs
+<% layout('layout') %>
+<%- include('../partials/header', { pageTitle: "Page Title", notificationCount }) %>
+
+<main class="flex-fill container py-4">
+  <!-- Page Content -->
+</main>
+
+<%- include('../partials/footer') %>
 ```
-study-corner/
-├── server.js          # Express server
-├── package.json       # App config and dependencies
-├── .gitignore         # Ignored files
-└── README.md          # Project instructions
+
+Use `header.ejs` and `footer.ejs` only where needed.
+
+---
+
+## 📄 Pages Summary
+
+### `/` → Home
+
+```ejs
+<% layout('layout') %>
+<%- include('../partials/header', { pageTitle: "Home", notificationCount }) %>
+
+<main class="flex-fill container py-4">
+  <h2>Welcome to Study Corner</h2>
+  <p>This is the homepage where your study journey begins!</p>
+</main>
+
+<%- include('../partials/footer') %>
+```
+
+### `/about` → About
+
+```ejs
+<% layout('layout') %>
+<%- include('../partials/header', { pageTitle: "About Us" }) %>
+
+<main class="flex-fill container py-4">
+  <h2>About Study Corner</h2>
+  <p>Study Corner is an educational platform built for students and alumni.</p>
+</main>
+
+<%- include('../partials/footer') %>
+```
+
+### `/contact` → Contact
+
+```ejs
+<% layout('layout') %>
+<%- include('../partials/header', { pageTitle: "Contact Us" }) %>
+
+<main class="flex-fill container py-4">
+  <h2>Contact Study Corner</h2>
+  <p>Email us at: <strong>contact@studycorner.com</strong></p>
+</main>
+
+<%- include('../partials/footer') %>
 ```
 
 ---
 
 ## 📜 License
 
-This project is licensed under the **MIT License**.
+This project is open-source and free to use under the [MIT License](https://opensource.org/licenses/MIT).
+
+---
+
+## ✨ Author
+
+Made with ❤️ by **[Your Name or GitHub Handle]**
+
+> Want to add more features like chat, memory sharing, Firebase auth? Let’s build together!
