@@ -1,12 +1,38 @@
-<footer class="py-4 mt-auto" style="background: linear-gradient(to right, #0d6efd, #6610f2);">
+<footer class="bg-primary text-white mt-auto pt-4 pb-3">
   <div class="container text-center">
-    <h5 class="mb-3">The Study Corner</h5>
-    <p class="mb-2">Empowering Students to Learn, Grow, and Connect</p>
+
+    <h5 class="fw-bold">The Study Corner</h5>
+    <p class="fst-italic">"Education is the most powerful weapon which you can use to change the world." — Nelson Mandela</p>
+
     <div class="mb-3">
-      <a href="/" class="text-white me-3 text-decoration-none">Home</a>
-      <a href="/about" class="text-white me-3 text-decoration-none">About</a>
-      <a href="/contact" class="text-white text-decoration-none">Contact</a>
+      <a href="/" class="text-white text-decoration-none me-3">Home</a>
+      <a href="/about" class="text-white text-decoration-none me-3">About</a>
+      <a href="/contact" class="text-white text-decoration-none me-3">Contact</a>
+      <a href="/resources" class="text-white text-decoration-none">Resources</a>
     </div>
-    <small>&copy; <%= new Date().getFullYear() %> The Study Corner. All rights reserved.</small>
+
+    <div class="mb-3">
+      <!-- Social Icons (Bootstrap Icons CDN required) -->
+      <a href="https://facebook.com" target="_blank" class="text-white me-3">
+        <i class="bi bi-facebook fs-4"></i>
+      </a>
+      <a href="https://twitter.com" target="_blank" class="text-white me-3">
+        <i class="bi bi-twitter-x fs-4"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" class="text-white me-3">
+        <i class="bi bi-instagram fs-4"></i>
+      </a>
+      <a href="https://youtube.com" target="_blank" class="text-white">
+        <i class="bi bi-youtube fs-4"></i>
+      </a>
+    </div>
+
+    <div class="mb-2">
+      <a href="https://play.google.com/store/apps/details?id=com.example.app" target="_blank" class="btn btn-light btn-sm fw-semibold">
+        📱 Download App on Play Store
+      </a>
+    </div>
+
+    <small class="d-block mt-2">&copy; <%= new Date().getFullYear() %> The Study Corner. Created by Your Name.</small>
   </div>
 </footer>
