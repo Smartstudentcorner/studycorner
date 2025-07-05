@@ -2,32 +2,17 @@
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="/">
       <img src="/images/logo.png" alt="Logo" width="35" height="35" class="me-2">
-      <span class="fw-bold"><%= siteTitle %></span>
+      <strong><%= siteTitle %></strong>
     </a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link fw-semibold" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-semibold" href="/about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-semibold" href="/contact">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-semibold" href="/resources">Resources</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-sm btn-light fw-semibold ms-lg-3" href="<%= playStoreUrl %>" target="_blank">
-            <i class="bi bi-google-play"></i> Get App
-          </a>
-        </li>
+        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="<%= playStoreUrl %>" target="_blank" class="btn btn-light btn-sm ms-3">📱 App</a></li>
       </ul>
     </div>
   </div>
