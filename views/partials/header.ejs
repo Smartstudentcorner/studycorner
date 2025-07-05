@@ -2,14 +2,14 @@
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="/">
       <img src="/images/logo.png" alt="Logo" width="35" height="35" class="me-2">
-      <div class="fw-bold">The Study Corner</div>
+      <span class="fw-bold"><%= siteTitle %></span>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link fw-semibold" href="/">Home</a>
@@ -22,6 +22,11 @@
         </li>
         <li class="nav-item">
           <a class="nav-link fw-semibold" href="/resources">Resources</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-sm btn-light fw-semibold ms-lg-3" href="<%= playStoreUrl %>" target="_blank">
+            <i class="bi bi-google-play"></i> Get App
+          </a>
         </li>
       </ul>
     </div>
