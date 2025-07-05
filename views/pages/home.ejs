@@ -1,38 +1,10 @@
+<%- include('../layout', { title: title }) %>
 <%- include('../partials/header') %>
 
-<main class="container my-5">
-  <div class="text-center mb-5">
-    <h1 class="fw-bold">Welcome to <span class="text-primary">The Study Corner</span></h1>
-    <p class="lead mt-3">Your one-stop platform for academic resources, mentorship, collaboration, and inspiration.</p>
-  </div>
-
-  <div class="row text-center">
-    <div class="col-md-4 mb-4">
-      <div class="card border-0 shadow h-100">
-        <div class="card-body">
-          <h5 class="card-title text-primary">Learn Together</h5>
-          <p class="card-text">Access shared study material, notes, and tutorials from alumni and current students.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 mb-4">
-      <div class="card border-0 shadow h-100">
-        <div class="card-body">
-          <h5 class="card-title text-success">Connect & Collaborate</h5>
-          <p class="card-text">Chat, ask doubts, and collaborate on projects with fellow learners across generations.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 mb-4">
-      <div class="card border-0 shadow h-100">
-        <div class="card-body">
-          <h5 class="card-title text-danger">Inspire & Guide</h5>
-          <p class="card-text">Alumni can mentor juniors and share their journey, experiences, and success stories.</p>
-        </div>
-      </div>
-    </div>
+<main class="flex-fill">
+  <div class="container my-5 text-center">
+    <h1>Welcome to <%= siteTitle %></h1>
+    <p class="lead mt-3">Your personalized space to learn, grow, and share knowledge.</p>
   </div>
 </main>
 
