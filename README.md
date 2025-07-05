@@ -1,173 +1,93 @@
-# 📘 Study Corner
+# 📚 The Study Corner
 
-**Study Corner** is a clean, responsive educational web app built using **Node.js**, **Express**, **EJS**, and **Bootstrap 5** — perfect for students, alumni, or any learning-focused community.  
-It uses a reusable layout, modular header and footer partials, and is fully mobile/tablet/desktop responsive.
+The Study Corner is a simple and clean Node.js + Express + EJS web app designed for modular templating with **Bootstrap** styling. It features:
 
----
-
-## 🚀 Features
-
-- ✅ Node.js + Express + EJS
-- ✅ Bootstrap 5 styling only (no custom CSS)
-- ✅ Reusable `layout.ejs` for all pages
-- ✅ Optional `header.ejs` and `footer.ejs` includes
-- ✅ Sticky header and footer
-- ✅ Responsive for Mobile, Tablet, and PC
-- ✅ Expandable JS and Media support (folders included)
-- ✅ Easy to deploy on Render or GitHub
+- ✅ Layout system using `express-ejs-layouts`
+- ✅ Reusable partials (Header & Footer)
+- ✅ Pages with or without layout support
+- ✅ Clean folder structure
 
 ---
 
-## 📁 Project Structure
+## 📁 Folder Structure
 
 ```
-study-corner/
-├── server.js
+the-study-corner/
+├── app.js
 ├── package.json
+├── public/                   # Static assets (optional)
 ├── views/
-│   ├── layout.ejs
+│   ├── layout/
+│   │   └── layout.ejs        # Main layout file
 │   ├── partials/
-│   │   ├── header.ejs
-│   │   └── footer.ejs
-│   └── pages/
-│       ├── home.ejs
-│       ├── about.ejs
-│       └── contact.ejs
-├── public/
-│   ├── js/
-│   │   ├── darkmode.js
-│   │   ├── transition.js
-│   │   └── notifications.js
-│   └── media/
-│       └── (your optional images/videos)
-├── README.md
+│   │   ├── header.ejs        # Reusable header
+│   │   └── footer.ejs        # Reusable footer
+│   ├── pages/
+│   │   ├── home.ejs          # Home page using layout
+│   │   └── nolayout.ejs      # Standalone page without layout
 ```
 
 ---
 
-## 📦 Dependencies
+## 🚀 Installation & Run
 
-- express
-- ejs
-- express-ejs-layouts
+```bash
+# 1. Clone or download the project
+# 2. Navigate to the folder
+npm install     # Install dependencies
+npm start       # Start the app on http://localhost:3000
+```
 
 ---
 
-## 🛠 Installation & Usage
+## 🌐 Deployment (e.g. Render / Railway / Vercel with Node.js)
 
-### 1. Clone the Repo
-
-```bash
-git clone https://github.com/your-username/study-corner.git
-cd study-corner
+1. Make sure your `start` script is set correctly:
+```json
+"scripts": {
+  "start": "node app.js"
+}
 ```
 
-### 2. Install Dependencies
+2. Push to GitHub (or your Git provider).
 
-```bash
+3. Go to [Render](https://render.com), [Railway](https://railway.app), or any Node.js hosting platform.
+
+4. Set up a new **Web Service**, connect your repo, and deploy.
+
+5. Ensure the **Build Command** is:
+```
 npm install
 ```
 
-### 3. Run the App
-
-```bash
+And the **Start Command** is:
+```
 npm start
 ```
 
-Open in your browser: [http://localhost:3000](http://localhost:3000)
+6. You're live! 🎉
 
 ---
 
-## 🌐 Deploy to Render (Free Hosting)
+## 📄 Pages Overview
 
-1. Push your project to a **GitHub** repository.
-2. Go to [https://render.com](https://render.com)
-3. Click **"New Web Service"**
-4. Choose **GitHub** → Select your repo
-5. Fill in:
-   - Environment: **Node**
-   - Build Command: `npm install`
-   - Start Command: `npm start`
-   - Root Directory: (leave blank)
-6. Click **Deploy**
-
-> Render will auto-install dependencies and run your app.
+| Route             | Description                     | Layout Used? |
+|------------------|----------------------------------|--------------|
+| `/`              | Home page                        | ✅ Yes        |
+| `/nolayout`      | Standalone page (no layout)      | ❌ No         |
 
 ---
 
-## 🧠 EJS Usage Pattern
+## 🔧 Tech Stack
 
-Each page includes this pattern:
-
-```ejs
-<% layout('layout') %>
-<%- include('../partials/header', { pageTitle: "Page Title", notificationCount }) %>
-
-<main class="flex-fill container py-4">
-  <!-- Page Content -->
-</main>
-
-<%- include('../partials/footer') %>
-```
-
-Use `header.ejs` and `footer.ejs` only where needed.
-
----
-
-## 📄 Pages Summary
-
-### `/` → Home
-
-```ejs
-<% layout('layout') %>
-<%- include('../partials/header', { pageTitle: "Home", notificationCount }) %>
-
-<main class="flex-fill container py-4">
-  <h2>Welcome to Study Corner</h2>
-  <p>This is the homepage where your study journey begins!</p>
-</main>
-
-<%- include('../partials/footer') %>
-```
-
-### `/about` → About
-
-```ejs
-<% layout('layout') %>
-<%- include('../partials/header', { pageTitle: "About Us" }) %>
-
-<main class="flex-fill container py-4">
-  <h2>About Study Corner</h2>
-  <p>Study Corner is an educational platform built for students and alumni.</p>
-</main>
-
-<%- include('../partials/footer') %>
-```
-
-### `/contact` → Contact
-
-```ejs
-<% layout('layout') %>
-<%- include('../partials/header', { pageTitle: "Contact Us" }) %>
-
-<main class="flex-fill container py-4">
-  <h2>Contact Study Corner</h2>
-  <p>Email us at: <strong>contact@studycorner.com</strong></p>
-</main>
-
-<%- include('../partials/footer') %>
-```
-
----
-
-## 📜 License
-
-This project is open-source and free to use under the [MIT License](https://opensource.org/licenses/MIT).
+- Node.js
+- Express.js
+- EJS Templating
+- express-ejs-layouts
+- Bootstrap 5 CDN (no custom CSS)
 
 ---
 
 ## ✨ Author
 
-Made with ❤️ by **[Your Name or GitHub Handle]**
-
-> Want to add more features like chat, memory sharing, Firebase auth? Let’s build together!
+Made with 💙 for JNV alumni, students, and developers.
