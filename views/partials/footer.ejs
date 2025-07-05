@@ -1,8 +1,8 @@
 <footer class="bg-primary text-white mt-auto pt-4 pb-3">
   <div class="container text-center">
 
-    <h5 class="fw-bold">The Study Corner</h5>
-    <p class="fst-italic">"Education is the most powerful weapon which you can use to change the world." — Nelson Mandela</p>
+    <h5 class="fw-bold"><%= siteTitle %></h5>
+    <p class="fst-italic"><%= studyQuote %></p>
 
     <div class="mb-3">
       <a href="/" class="text-white text-decoration-none me-3">Home</a>
@@ -12,27 +12,26 @@
     </div>
 
     <div class="mb-3">
-      <!-- Social Icons (Bootstrap Icons CDN required) -->
-      <a href="https://facebook.com" target="_blank" class="text-white me-3">
+      <a href="<%= socialLinks.facebook %>" class="text-white me-3" target="_blank">
         <i class="bi bi-facebook fs-4"></i>
       </a>
-      <a href="https://twitter.com" target="_blank" class="text-white me-3">
+      <a href="<%= socialLinks.twitter %>" class="text-white me-3" target="_blank">
         <i class="bi bi-twitter-x fs-4"></i>
       </a>
-      <a href="https://instagram.com" target="_blank" class="text-white me-3">
+      <a href="<%= socialLinks.instagram %>" class="text-white me-3" target="_blank">
         <i class="bi bi-instagram fs-4"></i>
       </a>
-      <a href="https://youtube.com" target="_blank" class="text-white">
+      <a href="<%= socialLinks.youtube %>" class="text-white" target="_blank">
         <i class="bi bi-youtube fs-4"></i>
       </a>
     </div>
 
     <div class="mb-2">
-      <a href="https://play.google.com/store/apps/details?id=com.example.app" target="_blank" class="btn btn-light btn-sm fw-semibold">
+      <a href="<%= playStoreUrl %>" target="_blank" class="btn btn-light btn-sm fw-semibold">
         📱 Download App on Play Store
       </a>
     </div>
 
-    <small class="d-block mt-2">&copy; <%= new Date().getFullYear() %> The Study Corner. Created by Your Name.</small>
+    <small class="d-block mt-2">&copy; <%= new Date().getFullYear() %> <%= siteTitle %>. Created by <%= creatorName %>.</small>
   </div>
 </footer>
